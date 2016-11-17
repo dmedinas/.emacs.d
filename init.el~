@@ -1,0 +1,22 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Emacs inital config
+;; put this file (init.el) in ~/.emacs.d/
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; Begin initialization
+
+(setq gc-cons-threshold 400000000)
+
+;;; Set up package
+(require 'package)
+(add-to-list 'package-archives
+	     '("melpa" . "https://melpa.org/packages/") t)
+(packages-initialize)
+
+;;; BootStrap use-package
+;; Install use-package if it's already installed.
+;; use-package is used to configure the rest of packages.
+
+(unless (package 

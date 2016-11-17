@@ -1,0 +1,38 @@
+#+TITLE: Emacs Configuration File
+#+AUTHOR: Durval Medinas
+#+EMAIL: 
+
+* Introduction
+
+  This is my =.emacs= file, is written in a [[http://www.orgmode.org][literate style]], to make it easy to use.
+  I've be using emacs for work and leasure. Mainly I use it for creating  =Nastran=, =Abaqus=, =Clisp= and =Python= files.
+  
+  This configuration uses the  [[https://github.com/jwiegley/use-package][use-package]] from John Wiegley, to install, manage and configure emacs packages.
+
+* Presonal Information
+
+* General Settings
+
+** Themes
+*** Cyberpunk theme
+
+
+#+BEGIN_SRC emacs-lisp 
+  (use-package cyberpunk-theme
+    :if (window-system)
+    :ensure t
+    :init
+    (progn
+      (load-theme 'cyberpunk t)
+      (set-face-attribute 'mode-line nil
+                          :box nil)
+      (set-face-attribute :mode-line-inactive nil
+                          :box nil)))
+#+END_SRC
+
+** Fonts
+
+
+
+
+ 
